@@ -1,21 +1,33 @@
 {
-  "name": "@postman/runscope-to-postman",
-  "version": "0.0.8",
-  "description": "Convert Runscope Radar Tests to Postman Collection v2",
+  "name": "runscope-to-postman-enhanced",
+  "version": "1.0.0",
+  "description": "Convert Runscope Radar Tests to Postman Collection v2 with Environment Variables and Enhanced Features",
   "main": "index.js",
-  "publishConfig": {
-    "registry": "https://npm.postmanlabs.com"
-  },
   "scripts": {
-    "test": "scripts/test.sh"
+    "test": "scripts/test.sh",
+    "convert": "node cli.js",
+    "update-env-vars": "node update-with-env-vars.js",
+    "validate": "node validate.js"
+  },
+  "bin": {
+    "runscope-to-postman": "./cli.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/postmanlabs/runscope-to-postman.git"
+    "url": "git+https://github.com/estebansg7/runscope-to-postman-enhanced.git"
+  },
+  "homepage": "https://github.com/estebansg7/runscope-to-postman-enhanced#readme",
+  "bugs": {
+    "url": "https://github.com/estebansg7/runscope-to-postman-enhanced/issues"
   },
   "keywords": [
     "runscope",
-    "postman"
+    "postman",
+    "api-testing",
+    "collection-converter",
+    "environment-variables",
+    "postman-v2",
+    "api-migration"
   ],
   "dependencies": {
     "lodash": "^4.17.5",
@@ -27,6 +39,12 @@
     "jshint": "^2.8.0",
     "mocha": "^2.2.5"
   },
-  "author": "Postman Labs",
-  "license": "MIT"
+  "author": "estebansg7 <estebansg7@github.com>",
+  "license": "MIT",
+  "contributors": [
+    "Postman Labs (original creator)"
+  ],
+  "engines": {
+    "node": ">=12.0.0"
+  }
 }
